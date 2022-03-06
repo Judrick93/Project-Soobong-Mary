@@ -2,8 +2,10 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <title>Project Soobong Mary</title>
+  <title>Project Soobong Mary - 카푸캬라!</title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"></script>
 
   <!-- style -->
     <link rel="stylesheet" href="style.css">
@@ -20,17 +22,28 @@
 
       gtag('config', 'G-XHYK3P8R28');
   </script>
-</head>
-<body>
-  <h1><a href="index.html" style="color:#a0819a">프로젝트 헤일메리</a></h1>
+  </head>
+  <body>
+  <div class="header-maintext">
+    <h1><a href="index.html" style="color:#a0819a">프로젝트 헤일메리</a></h1>
+      <div id="button_night_day">
+        <input type="button" value="night" onclick="
+          nightDayHandler(this);
+        ">
+      </div>
+
+  </div>
+
   <div id="grid">
     <ul>
-      <li><a href="1.html">20210820 카푸캬라!</a></li>
-      <li><a href="2.html">20210824 갤럭시 워치 4</a></li>
-      <li><a href="3.html">20210911 라이언 화분</a></li>
-      <li><a href="4.html">20200829 커스텀 방향제</a></li>
+      <li class="writed"><a href="1.html">20210820 카푸캬라!</a></li>
+      <li class="writed"><a href="2.html">20210824 갤럭시 워치 4</a></li>
+      <li class="writed"><a href="3.html">20210911 라이언 화분</a></li>
+      <li class="writed"><a href="4.html">20200829 커스텀 방향제</a></li>
       <li>20211008 브루니</li>
       <li>20210911 국전 데이트</li>
+      <br>
+      <li></li>
     </ul>
     <!--
     없는 셈 쳐라.
@@ -46,54 +59,58 @@
 
 
 
+  <br>
+      <!-- 댓글 기능 -->
+      <!-- 댓글 기능 -->
+  <p>
+      <div id="disqus_thread"></div>
+        <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://project-soobong-mary.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </p>
+  <!-- /댓글 기능 -->
+  <!-- /댓글 기능 -->
 
-<br>
-<p>
-    <div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://project-soobong-mary.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+  <!-- //footer -->
+  <!-- //footer -->
+  <div id="footer">
+    <div class="container">
+      <h2 class="ir_su">푸터영역</h2>
+      <div class="footer">
+        <ul>
+          <li><a href="mailto:judrick.kakao.com" target="_blank">Contact</a></li>
+          <li><a href="https://www.instagram.com/judrick_official/" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/Judrick93" target="_blank">Github</a></li>
+          <li><a href="https://blog.naver.com/yj_7274" target="_blank">Blog</a></li>
+        </ul>
+        <address>
+          Copyright&copy;judrick.lim All Right Reserved
+        </address>
+        <P>since 2019.08.29 ~</p>
+          <p><strong><a href="https://brunch.co.kr/@wonsikkim90gz/155" targrt="_blank" title="내가 놓친 것">익숙함에 속아 <u>소중함</u>을 잃지 말자</a></strong>는 취지입니다.</p>
+          <p style="margin-top:40px;">
+      </div>
 
-</p>
-
-<!-- //footer -->
-<div id="footer">
-  <div class="container">
-    <h2 class="ir_su">푸터영역</h2>
-    <div class="footer">
-      <ul>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Github</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <address>
-        Copyright&copy;judrick.lim All Right Reserved
-      </address>
-      <P>since 2019.08.29 ~</p>
-        <p><strong><a href="https://brunch.co.kr/@wonsikkim90gz/155" targrt="_blank" title="내가 놓친 것">익숙함에 속아 <u>소중함</u>을 잃지 말자</a></strong>는 취지입니다.</p>
-        <p style="margin-top:40px;">
     </div>
-
   </div>
-</div>
-<!-- //footer -->
-</body>
+  <!-- //footer -->
+  <!-- //footer -->
+  </body>
 
-</html>
+  </html>

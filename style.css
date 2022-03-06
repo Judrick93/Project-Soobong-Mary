@@ -1,3 +1,8 @@
+@charset "UTF-8";
+
+/* 레이아웃 */
+  #footer {border-top: 1px solid #eee;}
+
 a {
   color:#c1a2cc;
   text-decoration: none;
@@ -5,22 +10,46 @@ a {
 .saw {
   color:#96a3af;
 }
-h1 {
+.header-maintext{
+  border-bottom: 1px solid #eee;
+  margin: 0px;
+}
+
+.header-maintext h1 {
   font-size: 60px;
   text-align: center;
-  border-bottom: 1px solid gray;
   margin: 0px;
   padding: 100px;
 }
+h2 {
+  text-align: center;
+}
+
+/*이거 왜 안 되지?*/
+.writed li {li::marker { color:#c1a2cc; }}
+
+
+/* 푸터 */
+.footer {padding: 25px 0; text-align: center;}
+.footer ul {margin-bottom: 100px; display: inline; padding: 0 7px 0 10px; }
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px; }
+.footer li:before {content: ''; width: 1px; height: 12px; background: #ccc; position: absolute; left: 0; top: 2px;}
+.footer li:first-child::before {width: 0; height: 0;}
+
 ul {
-  border-right: 1px solid gray;
+  border-right: 1px solid #eee;
   width:200px;
   margin: 0px;
   padding: 20px 20px 20px 50px;
+  list-style:none;
 }
-body{
+body,html{
   margin: 0px;
+  width: 100%;
+  height: 100%;
+
 }
+#button_night_day {margin:0 auto; width: 100%}
 #grid{
   display: grid;
   grid-template-columns: 270px 1fr;
@@ -30,7 +59,17 @@ body{
 }
 #article{
   padding: 25px;
+  margin: 0 auto;
+  text-align: center;
 }
+img {
+  width: 900px;
+  object-fit: cover;
+}
+/* IR 효과 */
+.ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} /* 의미있는 이미지의 대체 텍스트를 제공하는 경우 */
+.ir_wa {display: block; overflow: hidden; position: relative; z-index: -1; width: 100%; height: 100%;} /* 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고하 할 때 */
+.ir_su {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;} /* 대체 텍스트가 아니 접근성을 위한 숨김 텍스트를 제공할 때 */
   @media(max-width:800px){
     #grid{
       display: block;
@@ -38,8 +77,7 @@ body{
     ul {
       border-right: none;
     }
-    h1 {
+    .header-maintext {
       border-bottom: none;
     }
-
   }
